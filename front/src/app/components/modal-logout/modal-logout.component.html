@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Encerrar sessão</h1>
+<div mat-dialog-content>
+  Deseja realmente <b>sair</b> do sistema?
+</div>
+<div mat-dialog-actions class="buttons">
+  <button mat-button mat-dialog-close class="button-cancelar">Cancelar</button>
+  <button mat-button (click)="logout()" class="button-confirm" >Sair</button>
+</div>

@@ -1,0 +1,52 @@
+<app-title-page title="Cadastro"></app-title-page>
+<div class="content">
+    <div>
+        <form class="form">
+            <mat-form-field class="field">
+                <mat-label>Nome</mat-label>
+                <input [(ngModel)]="user.nome" type="text" matInput [formControl]="nameFormControl" placeholder="Nome">
+                <mat-error *ngIf="nameFormControl.hasError('required')">
+                    Nome é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="field">
+                <mat-label>Email</mat-label>
+                <input [(ngModel)]="user.login" type="email" matInput [formControl]="emailFormControl"
+                    placeholder="Ex. email@exemplo.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    E-mail inválido
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="field">
+                <mat-label>Tipo de usuário</mat-label>
+                <mat-select [(ngModel)]="user.tipo" [formControl]="typeFormControl">
+                    <mat-option value="administrador">Administrador</mat-option>
+                    <mat-option value="usuario">Usuário</mat-option>
+                </mat-select>
+                <mat-error *ngIf="typeFormControl.hasError('required')">
+                    Tipo de usuário é <strong>obrigatório</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-slide-toggle *ngIf="user.id != 0" [color]="color" [checked]="checked" (click)="onChangeAlterarSenha()">
+                Alterar senha
+            </mat-slide-toggle>
+            <mat-form-field *ngIf="showFieldPassword">
+                <mat-label>Senha</mat-label>
+                <input [(ngModel)]="user.password" id="password" type="password" matInput placeholder="Senha"
+                    [formControl]="passFormControl">
+                <mat-error *ngIf="passFormControl.hasError('required')">
+                    Senha é <strong>obrigatória</strong>
+                </mat-error>
+            </mat-form-field>
+        </form>
+        <div class="button">
+            <button routerLink="/" mat-button class="button-voltar"><mat-icon aria-hidden="false"
+                    fontIcon="keyboard_backspace"></mat-icon> Voltar</button>
+            <button (click)="save()" mat-button class="button-confirm"><mat-icon aria-hidden="false"
+                    fontIcon="save"></mat-icon> Salvar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+table {
+    min-width: 800px;
+  }
+
+.icon1{
+  cursor: pointer;
+  color: rgb(99, 96, 96);
+  padding-right: 5px;
+}
+
+.icon2{
+  cursor: pointer;
+  color: rgb(99, 96, 96);
+}
+
+.button-add {
+  background-color: #2bd142;
+  color: white !important;
+  height: 48px;
+  width: 90px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: rgb(80 97 120) 2px 5px 10px;
+  margin-left: 10px;
+  // margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.button-add:hover{
+  background-color: #23ac35;
+}
+
+.row-search{  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search{
+  width: 500px;
+}
+
+.icon-add{
+  padding-right: 3px;
+}
+
+.warning{
+  padding-top: 80px;
+}
+
+.button-search {
+  background-color: #0d5297;
+  color: white !important;
+  height: 48px;
+  width: 90px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: rgb(80 97 120) 2px 5px 10px;
+  margin-left: 30px;
+  // margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.button-search:hover{
+  background-color: #2078cf;
+}
+
+.paginator{
+  width: 800px;
+}
+
+
+
+  

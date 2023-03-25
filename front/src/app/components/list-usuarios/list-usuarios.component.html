@@ -1,0 +1,44 @@
+<app-title-page title="Lista de Usuários"></app-title-page>
+<div class="content">
+  <div class="row-search">
+     <mat-form-field class="search">
+      <mat-label>Pesquisar</mat-label>
+      <input [(ngModel)]="filter" matInput placeholder="Pesquisar pelo nome" #input>
+       <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button (click)="getUsers()" mat-button class="button-search"> Buscar</button>
+    <button *ngIf="isAdmin" routerLink="/edit-usuario" mat-button class="button-add"> Novo</button>
+  </div>
+  <table *ngIf="users != null && users.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Código </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> E-mail </th>
+      <td mat-cell *matCellDef="let element"> {{element.login}} </td>
+    </ng-container>
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell *matHeaderCellDef> Tipo </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipo == "administrador" ? "Administrador" : "Usuário"}} </td>
+    </ng-container>
+    <ng-container *ngIf="isAdmin" matColumnDef="options">
+      <th mat-header-cell *matHeaderCellDef>Opções</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon class="icon1" aria-hidden="false" (click)="goToEdit(element.id)" matTooltip="Editar"
+          fontIcon="mode_edit"></mat-icon>
+        <mat-icon class="icon2" aria-hidden="false" (click)="openModal(element.id, element.nome)" matTooltip="Excluir"
+          fontIcon="delete"></mat-icon>
+      </td>
+    </ng-container> 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator *ngIf="users != null && users.length > 0" class="paginator mat-elevation-z8" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons> </mat-paginator>
+  <h2 class="warning" *ngIf="users == null || users.length == 0">Nenhum usuário encontrado.</h2>
+
+</div>

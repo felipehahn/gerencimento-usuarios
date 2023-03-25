@@ -1,0 +1,16 @@
+<div class="topbar">
+    <div class="elements-header">
+        <span routerLink="" matTooltip="Página Inicial" class="span-1"><mat-icon class="icon-people" aria-hidden="false" fontIcon="people"></mat-icon>Gerenciamento de usuários</span>
+        <div>
+            <div [matMenuTriggerFor]="menu" class="user-click" matTooltip="Editar cadastro">
+                <mat-icon class="icon-user" aria-hidden="false" fontIcon="perm_identity"></mat-icon>
+                <span class="user-email">{{email}}</span>
+            </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="goToPerfil()"> <mat-icon class="icon-user" aria-hidden="false" fontIcon="person"></mat-icon>Meu Perfil</button>
+                <button mat-menu-item (click)="openModal()"> <mat-icon class="icon-user" aria-hidden="false" fontIcon="logout"></mat-icon>Sair</button>
+            </mat-menu>
+        </div>
+        
+    </div>
+</div>
