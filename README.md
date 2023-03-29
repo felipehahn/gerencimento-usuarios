@@ -4,7 +4,7 @@
 <p>Back end(API) - Java com Spring Boot, Spring Security e JPA.</p>
 <br/>
 <br />
-<h2>RODAR API<h2/>
+<h2>RODAR API</h2>
 <br/>
   <p>JAVA JDK => Versão 17. </p>
   <p>Utilizei a IDE Eclipse => Versão 2023-03. </p>
