@@ -7,7 +7,7 @@ Back end(API) - Java com Spring Boot, Spring Security e JPA.
 ##RODAR API##
 <br/>
 JAVA JDK => Versão 17. <br/>
-Utilizei a IDE Eclipse, versão 2023-03. 
+Utilizei a IDE Eclipse => Versão 2023-03. 
 <br/>
 Adicionar o Spring Tools na IDE => Help > Eclipse Marketplace > Pesquisar por Spring Tools 4 e instalar.
 <br />
@@ -18,7 +18,7 @@ Depois de importar o projeto, basta acessar o pacote "com.gerenusers", clicar co
 <br/>
 ##BANCO DE DADOS##
 <br/>
-Versão POSTGRES - 15<br/>
+POSTGRES => Versão 15<br/>
 Instalar o banco de dados Postgres em sua máquina, no projeto o usuário e senha do banco estão definidos respectivamente como "postgres" e "123456". Mas caso o banco estiver configurado com outras credenciais, basta alterar essas informações no arquivo application.properties, que fica dentro do projeto no caminho => src/main/resources/application.properties.
 <br/>
 Com o banco de dados configurado, basta rodar a API.<br/>
