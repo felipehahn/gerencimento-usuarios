@@ -7,9 +7,8 @@ Back end(API) - Java com Spring Boot, Spring Security e JPA.
 <h2>RODAR API<h2/>
 <br/>
 <br/>
-JAVA JDK => Versão 17. <br/>
-Utilizei a IDE Eclipse => Versão 2023-03. 
-<br/>
+  <p>JAVA JDK => Versão 17. </p>
+  <p>Utilizei a IDE Eclipse => Versão 2023-03. </p>
 Adicionar o Spring Tools na IDE => Help > Eclipse Marketplace > Pesquisar por Spring Tools 4 e instalar.
 <br />
 Após clonar o projeto, adicionar no Eclipse a pasta referente ao projeto da API, que tem o nome de "gerenusers-api" => File > Import > General > File System > Selecionar o diretório do projeto > Selecionar todos os arquivos do projeto e importar.
