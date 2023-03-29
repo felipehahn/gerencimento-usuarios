@@ -4,7 +4,7 @@ Front - Angular e TypeScript.<br/>
 Back end(API) - Java com Spring Boot, Spring Security e JPA.
 <br/>
 <br />
-##RODAR API##
+#RODAR API#
 <br/>
 JAVA JDK => Versão 17. <br/>
 Utilizei a IDE Eclipse => Versão 2023-03. 
@@ -16,7 +16,7 @@ Após clonar o projeto, adicionar no Eclipse a pasta referente ao projeto da API
 Depois de importar o projeto, basta acessar o pacote "com.gerenusers", clicar com o botão direito sobre a classe dentro do pacote > Run As > Spring Boot App. Antes de rodar, é necessário configurar o banco de dados.
 <br/>
 <br/>
-##BANCO DE DADOS##
+#BANCO DE DADOS#
 <br/>
 POSTGRES => Versão 15<br/>
 Instalar o banco de dados Postgres em sua máquina, no projeto o usuário e senha do banco estão definidos respectivamente como "postgres" e "123456". Mas caso o banco estiver configurado com outras credenciais, basta alterar essas informações no arquivo application.properties, que fica dentro do projeto no caminho => src/main/resources/application.properties.
@@ -25,7 +25,7 @@ Com o banco de dados configurado, basta rodar a API.<br/>
 Será necessário importar no banco um usuário admin já configurado, sendo o e-mail de login "admin@gmail.com" e senha "1234". Esse arquivo se encontra na raiz do projeto com o nome de "banco.csv". Para importar, é preciso ter o Pg Admin instalado. Após isso, acessar o banco de dados do servidor no PgAdmin > Schemas > Tables > Selecionar a tabela usuario > Tools > Import/Export Data > Selecionar o arquivo csv de importação e utilizar a opção Import e Encoding BIG5. Dessa forma já tera um  usuário cadastrado no banco para realizar todas as operações CRUD do sistema.
 <br />
 <br />
-##RODAR FRONT##
+#RODAR FRONT#
 <br/>
 Ter instalado o Node JS (Utilizei a versão 16.14.1). <br/>
 ANGULAR => Versão 15.2. <br/>
