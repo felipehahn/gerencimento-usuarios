@@ -20,7 +20,7 @@ export class TopBarComponent{
   }
 
   goToPerfil(){
-    this.router.navigate(["edit-usuario"], { queryParams: { id: sessionStorage.getItem('userId') } });
+    window.location.href = `http://localhost:4200/edit-usuario?id=${sessionStorage.getItem('userId')}`
   }
 
   openModal() {
